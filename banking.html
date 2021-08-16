@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Part</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="w-3/4 mx-auto"> 
+        <h1 class="text-5xl text-center text-purple-300 font-bold mt-12 mb-8">My Account</h1>
+        <div class="w-full p-8">
+            <div class="grid grid-cols-3 gap-4 mb-8">
+                <div class="bg-blue-300 p-8 rounded">
+                    <h1 class="text-4xl text-white mb-2 font-semibold">Diposit</h1>
+                    <h1 class="text-5xl text-white font-bold">$<span id="diposit-amount">00</span></h1>
+                </div>
+                <div class="bg-green-300 p-8 rounded">
+                    <h1 class="text-4xl text-white mb-2 font-semibold">Withdraw</h1>
+                    <h1 class="text-5xl text-white font-bold">$<span id="withdraw-amount">00</span></h1>
+                </div>
+                <div class="bg-red-300 p-8 rounded">
+                    <h1 class="text-4xl text-white mb-2 font-semibold">Total Balance</h1>
+                    <h1 class="text-5xl text-white font-bold">$<span id="balance-amount">2000</span></h1>
+                </div>
+            </div>
+
+
+            <div class="grid grid-cols-2 gap-4">
+                <div class="bg-yellow-300 p-8 rounded">
+                    <h1 class="text-5xl text-white mb-2 font-bold mb-4">Diposit</h1>
+                    <input id="depositInput" class="block p-4 mb-4 w-3/4 rounded" type="number" placeholder="Enter Your Amount">
+                    <button id="depositButton" class="block p-2 px-4 bg-gray-700 text-white rounded font-bold">Deposit</button>
+                </div>
+                <div class="bg-indigo-300 p-8 rounded">
+                    <h1 class="text-5xl text-white mb-2 font-bold mb-4">Withdraw</h1>
+                    <input id="withdrawInput" class="block p-4 mb-4 w-3/4 rounded" type="number" placeholder="Enter Your Amount">
+                    <button id="withdrawButton" class="block p-2 px-4 bg-gray-700 text-white rounded font-bold">Withdraw</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+
+    <script src="js/bank.js"></script>
+</body>
+</html>

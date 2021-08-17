@@ -21,8 +21,12 @@ document.getElementById('depositButton').addEventListener('click', function () {
     const addDeposit = addAmount('diposit-amount');
     const addBalance = addAmount('balance-amount');
 
-    document.getElementById('diposit-amount').innerText = deposit + addDeposit;
-    document.getElementById('balance-amount').innerText = addBalance + deposit;
+    if (deposit > 0) {
+        document.getElementById('diposit-amount').innerText = deposit + addDeposit;
+        document.getElementById('balance-amount').innerText = addBalance + deposit;
+    } else {
+        alert('Please Give Valid Amount');
+    }
 })
 
 document.getElementById('withdrawButton').addEventListener('click', function () {
@@ -30,6 +34,10 @@ document.getElementById('withdrawButton').addEventListener('click', function () 
     const addWithdraw = addAmount('withdraw-amount');
     const minusBalance = addAmount('balance-amount');
 
-    document.getElementById('withdraw-amount').innerText = withdraw + addWithdraw;
-    document.getElementById('balance-amount').innerText = minusBalance - withdraw;
+    if (minusBalance >= withdraw && withdraw > 0) {
+        document.getElementById('withdraw-amount').innerText = withdraw + addWithdraw;
+        document.getElementById('balance-amount').innerText = minusBalance - withdraw;
+    } else {
+        alert('You Have Not Sufficient Balance');
+    }
 })
